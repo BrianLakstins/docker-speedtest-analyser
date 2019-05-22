@@ -1,0 +1,14 @@
+version: "3.5"
+services:
+  speedtest:
+    build: ./
+    volumes:
+      - type: volume
+        source: speedtest-data
+        target: /var/www/html/data/
+    image: speedtest
+    ports:
+      - 8080:80
+      - 8443:443
+volumes:
+  speedtest-data:     

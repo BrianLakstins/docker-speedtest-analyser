@@ -9,6 +9,7 @@ services:
     image: speedtest
     ports:
       - 8080:80
-      - 8443:443
+    restart: unless-stopped      
+
 volumes:
   speedtest-data:     
